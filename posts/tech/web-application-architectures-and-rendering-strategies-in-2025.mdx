@@ -1,10 +1,88 @@
 ---
 title: "Web Application Architectures and Rendering Strategies in 2025"
-date: "2025-03-05"
+date: "2025-03-12"
 tags: ["react", "next.js", "vite"]
 draft: true
 summary: ""
-images: ["../../assets/tech/create-react-app-deprecated.webp"]
+images:
+  [
+    "../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-1.webp",
+  ]
 ---
 
-![Web App Architectures](../../assets/tech/web-app-architectures.webp)
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-1.webp)
+
+In a [recent article about the modern ways to create a React App](https://blog.maiko26.tn/tech/create-react-app-deprecated-what-are-the-modern-alternatives), I talked about about the different frameworks and their optimal ways to use each based on the web architecture that you choose and there's pros and cons to each one and use cases.
+
+So here we are to breakdown it down, so first and foremost people often conflate between Web Architectures and Rendering Strategies, Web Architectures are the broad structure of how the app behave and mainly talking about routing and the 2 most common architectures are MPA(Multi-Page Application) which's the traditional way of creating websites using famously PHP (Wordpress) or Ruby on Rails or even modern solutions that came around back to MPAs like Next.js. And there's also SPA (Single Page Application) which's the new way that came with the JS framework wave from 2010 onwards.
+
+Now what is the difference between these 2 architectures ?
+
+## Web Architectures
+
+### SPA (Single Page Applications)
+
+This is often used interchangably with CSR(Client Side Rendering) as it's based on the concept that the Client gets all the Javascript it needs for the Application and all the compute and rendering happens in the client instead of the server for seemless native experience instead of back and forth with the server.
+
+SPA are most commonly known for the JS frameworks like React, Angular, Vue, Solid, Svelte etc ...
+
+### MPA (Multi-Page Application)
+
+As I said earlier, this is the traditional way of doing web sites/apps. The server is in charge of the compute and rendering and would send the browser of the user the page ready to go and interact with.
+
+This is commonly known for Wordpress, Shopify and JS Meta-Frameworks like Next.js, Astro, Solidstart, Sveltekit etc ...
+
+## Rendering Strategies
+
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-2.webp)
+
+There are 4 popular rendering strategies in 2025 with many other hybrid or combinations of these and they are :
+
+- CSR (Client Side Rendering)
+- SSR (Server Side Rendering)
+- ISR (Incremantal Server Rendering)
+- SSG (Static Site Generation)
+
+### CSR
+
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-csr.webp)
+
+Slow initial load and bad SEO for fast navigation and native experience is what your trading here, CSR was revolutionnary to build complex apps with a lot of state and interactivity that's why it is great.
+
+The way it works is that the user sends a request for a page and would get a Shell HTML + JS initially and this is why CSR on it's own is bad for SEO as webcrawler will only find the initial empty shell page.
+
+Then the JS fetched initially would fetch more data and this would result in a lot of time waiting for FCP (First Contentful Paint) which's one of the Core Web Vitals.
+
+After many requests the App would hydrate and the user can finally interact but from here onwards the Navigation is seemless as it's close to a Native app and managing state is much easier allowing you to create complex apps on the web.
+
+Thus CSR excels at creating Social Media Apps, Dashboards and overall highly interactive apps that don't need the SEO and won't be bothered with initial slow load.
+
+### SSR
+
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-ssr.webp)
+
+Great SEO, Great Performance especially the initial load (depending on your server charesteristics) as everything runs through the server and content is dynamically fetched on demand, it is the most powerful and best as the default strategy in my opinion.
+
+The way it works is simple, it's the way websites worked for so long.
+
+The user makes a request to the server, the server fetch data from Database then renders the page and sends it to the user.
+
+With this web crawlers get fully rendered fast pages on visit which makes it great for SEO.
+
+And with the great advancement in SSR it even feels close to CSR especially using a meta framework and pre-fetching and caching making the navigation as snappy as possible.
+
+Finally SSR is a great strategy for everything, Social Media, Dashboard, Chat App, Content Heavy, E-Commerce etc ...
+
+### SSG
+
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-ssg.webp)
+
+Underrated in my opinion because I see a lot of devs just use React and throw a massive framework when they are doing a static portfolio that has some animation so he can just do HTML/CSS/JS and throw them in any cheap Server that serves files like ngnix, apache or caddy and save himself so much money.
+
+And with Static Site Generators you can even build your app in your comfort/favorite framework then it can be translated in a dist/out folder that you can zip and drag and drop in a server.
+
+The way this works for example Next.js or Astro allow you to
+
+### ISR
+
+![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-isr.webp)
