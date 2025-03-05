@@ -79,10 +79,22 @@ Finally SSR is a great strategy for everything, Social Media, Dashboard, Chat Ap
 
 Underrated in my opinion because I see a lot of devs just use React and throw a massive framework when they are doing a static portfolio that has some animation so he can just do HTML/CSS/JS and throw them in any cheap Server that serves files like ngnix, apache or caddy and save himself so much money.
 
+And out of all the strategies we seen so far this has the best performance as the page is rendered and ready to go from build time and has the gains of SSR in SEO as well.
+
 And with Static Site Generators you can even build your app in your comfort/favorite framework then it can be translated in a dist/out folder that you can zip and drag and drop in a server.
 
-The way this works for example Next.js or Astro allow you to
+The way this works for example Next.js or Astro allow you to write React then using Webpack(Turbopack)/Vite it will bundle everything and optimize things together to give you a dist/out ready to go.
+
+The only issue with SSG is in the name, that it's static and thus this is mainly used for content-driven websites where it barely changes because you will need to rebuild and redeploy the entire website after a change.
 
 ### ISR
 
 ![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-isr.webp)
+
+A Hybrid of SSR and SSG, it is really good as it has the speed of SSG and the dynamic feeling of SSR.
+
+And the way it works is that on each request the server would send back the already built/cached version of the page (so in the diagram above user 1 would get his content faster) then checks if there has been changed in the database or maybe if there's a time expiry programmed and if the answer is yes then the server fetches the new data and rebuilds it on the spot so the 2nd user in the diagram gets the new built static page with the same performance of an SSG despite it being dynamically built.
+
+A lot of tools help you achieve this but I personally default to Next.js and Astro, I'm sure all the other meta-frameworks like Sveltekit or Solidstart can do this as well.
+
+## Conclusion
