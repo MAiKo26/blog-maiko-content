@@ -5,14 +5,12 @@ tags: ["react", "next.js", "vite"]
 draft: true
 summary: "Explore modern web application architectures and rendering strategies in 2025. Learn about SPA vs. MPA, CSR, SSR, SSG, and ISR to optimize performance, SEO, and user experience."
 images:
-  [
-    "../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-1.webp",
-  ]
+  ["../../assets/web-app-architectures-and-rendering-strategies-in-2025-1.webp"]
 ---
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-1.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-1.webp)
 
-In a [recent article about the modern ways to create a React app](https://blog.maiko26.tn/tech/create-react-app-deprecated-what-are-the-modern-alternatives), I discussed different frameworks and how to use each optimally based on the chosen web architecture—each with its own pros, cons, and use cases.
+In a [recent article about the modern ways to create a React app](https://blog.maiko26.tn/create-react-app-deprecated-what-are-the-modern-alternatives), I discussed different frameworks and how to use each optimally based on the chosen web architecture—each with its own pros, cons, and use cases.
 
 Today, I want to break it down further. People often conflate **Web Architectures** and **Rendering Strategies**. Web Architectures refer to the broad structure of how an app behaves—primarily how routing is handled—while Rendering Strategies are about how the content of each page is generated and delivered.
 
@@ -35,7 +33,7 @@ MPAs represent the traditional way of building websites and apps, where the serv
 
 ## Rendering Strategies
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-2.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-2.webp)
 
 There are four popular rendering strategies in 2025—along with many hybrids and combinations—that you can use depending on your needs:
 
@@ -46,25 +44,25 @@ There are four popular rendering strategies in 2025—along with many hybrids an
 
 ### CSR (Client-Side Rendering)
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-csr.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-csr.webp)
 
 CSR works by sending the user a basic HTML shell along with JavaScript. Once the JS is executed, it fetches additional data to render the page. While this provides a highly interactive experience—making it great for social media apps and dashboards—it comes with a slow initial load and poor SEO since web crawlers only see the empty shell at first.
 
 ### SSR (Server-Side Rendering)
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-ssr.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-ssr.webp)
 
 SSR generates the full HTML page on each request. The server fetches data from the database, renders the page, and sends it to the user. This results in a fast initial load and excellent SEO since web crawlers receive fully rendered pages. With advancements like pre-fetching and caching in modern meta-frameworks, SSR can offer performance close to that of CSR while still providing dynamic content.
 
 ### SSG (Static Site Generation)
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-ssg.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-ssg.webp)
 
 SSG builds your pages at build time, generating static HTML files that are ready to serve instantly. This method offers outstanding performance and SEO benefits since the content is already rendered. However, because the pages are static, they only update when you rebuild and redeploy the site—a good choice for content-driven websites that change infrequently.
 
 ### ISR (Incremental Static Regeneration)
 
-![Web App Architectures](../../assets/tech/web-app-architectures-and-rendering-strategies-in-2025-isr.webp)
+![Web App Architectures](../../assets/web-app-architectures-and-rendering-strategies-in-2025-isr.webp)
 
 ISR is a hybrid approach that combines the speed of SSG with the dynamism of SSR. On the first request, the server sends a cached, pre-built page. In the background, it checks if the content has changed (or if a set time has expired) and, if so, rebuilds the page. This ensures subsequent users receive updated content with the performance benefits of static pages. Tools like Next.js and Astro support ISR, as do other frameworks like SvelteKit and SolidStart.
 
